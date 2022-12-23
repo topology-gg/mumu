@@ -1,7 +1,7 @@
 %lang starknet
 
 from contracts.simulator.mechs import InputMechState
-from contracts.simulator.atoms import AtomState
+from contracts.simulator.atoms import AtomState, AtomFaucetState, AtomSinkState
 from contracts.simulator.grid import Grid
 
 //
@@ -11,6 +11,7 @@ from contracts.simulator.grid import Grid
 @event
 func new_simulation(
     solver: felt,
+    music_title: felt,
     mechs_len: felt,
     mechs: InputMechState*,
     instructions_sets_len: felt,
@@ -23,6 +24,12 @@ func new_simulation(
     operators_outputs: Grid*,
     operators_type_len: felt,
     operators_type: felt*,
+    mech_volumes_len: felt,
+    mech_volumes: felt*,
+    faucets_len: felt,
+    faucets: AtomFaucetState*,
+    sinks_len: felt,
+    sinks: AtomSinkState*,
     static_cost: felt,
 ) {
 }
