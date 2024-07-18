@@ -1,0 +1,250 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+    font-size: 0.75rem;
+}
+
+.modal-header,
+.modal-body,
+.modal-footer {
+  padding: 2rem;
+}
+
+input {
+    font-family: menlo;
+}
+
+button {
+    font-family: menlo;
+    font-size: 0.75rem;
+    margin-right: 3px;
+    height: 1.5rem;
+    border: 1px solid #333333;
+    border-radius: 3px;
+}
+button:hover {
+    background-color: #FFFE71;
+    cursor: pointer;
+}
+
+.grid {
+    display: flex;
+    font-size: 0.2em;
+    margin: 0.2rem;
+    padding: 0rem;
+    width: 1rem;
+    height:1rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: inherit;
+    cursor: default;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: color 0.15s ease, border-color 0.15s ease;
+    max-width: 300px;
+}
+
+.grid:hover {
+    outline-width: 1px;
+    outline-style: dashed;
+    outline-color: #63e2ff88;
+}
+
+.machine {
+    background-color: #0070f3;
+}
+
+.mech_open {
+    border: 1px solid #FFFFFF;
+}
+
+.mech_close {
+    border: 1px solid #FF7A00;
+}
+
+.atom_free {
+    background-color: #DA2C43;
+}
+
+.atom_possessed {
+    background-color: #FF6347;
+}
+
+.leaderboard_row {
+    width: 8rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.solution_row:hover {
+    background-color: #FFFE71;
+    cursor: pointer;
+}
+
+.stardisc {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+.stardisc:hover {
+    background-color: #FFFE71;
+    cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+    color-scheme: light;
+}
+body {
+    color: black;
+    background: white;
+}
+
+li {
+    font-size: 0.75rem;
+}
+
+table {
+    border-collapse:collapse;
+}
+
+#submit-button{
+    background: #EFEFEF url('../public/rsz_1starknet_icon.png') no-repeat;
+    background-position: 93% 50%;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+    height: 1.5rem;
+    padding-right: 1.6rem;
+    border: 1px solid #333333;
+    border-radius: 3px;
+}
+#submit-button:hover{
+    background-color: #FFFE71;
+    cursor: pointer;
+}
+
+#twitter {
+    background: #FFFFFFFF url('../src/images/twitter_icon.png') no-repeat;
+    background-size: 100%;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+}
+
+#discord {
+    background: #FFFFFFFF url('../src/images/discord_icon.jpeg') no-repeat;
+    background-size: 100%;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* source for styling range input below:
+https://stackoverflow.com/questions/18389224/how-to-style-html5-range-input-to-have-different-color-before-and-after-slider */
+/*Chrome*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    input[type='range'] {
+      overflow: hidden;
+      width: 40px;
+      -webkit-appearance: none;
+      background-color: #98c0bb;
+    }
+
+    input[type='range']::-webkit-slider-runnable-track {
+      height: 10px;
+      -webkit-appearance: none;
+      color: #98c0bb;
+      margin-top: -1px;
+    }
+
+    input[type='range']::-webkit-slider-thumb {
+      width: 10px;
+      -webkit-appearance: none;
+      height: 10px;
+      cursor: ew-resize;
+      background: #2d4249;
+      box-shadow: -200px 0 0 200px #937882;
+    }
+
+}
+/** FF*/
+input[type="range"]::-moz-range-progress {
+  background-color: #43e5f7;
+}
+input[type="range"]::-moz-range-track {
+  background-color: #9a905d;
+}
+/* IE*/
+input[type="range"]::-ms-fill-lower {
+  background-color: #43e5f7;
+}
+input[type="range"]::-ms-fill-upper {
+  background-color: #9a905d;
+}
+
+/*
+@media (prefers-color-scheme: light) {
+  html {
+    color-scheme: light;
+  }
+  body {
+    color: black;
+    background: white;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+} */
+
+:root {
+  --font-family-secondary: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+/* ref: https://alvarotrigo.com/blog/css-highlight-text/ */
+strong {
+    position: relative;
+}
+strong::before {
+    /* Highlight color */
+    background-color: #FFFE71;
+
+    content: "";
+    position: absolute;
+    width: calc(100% + 4px);
+    height: 60%;
+    left: -2px;
+    bottom: 0;
+    z-index: -1;
+    transform: rotate(-5deg);
+}
+
+input::placeholder {
+    opacity: .5;
+}
+
+.result {
+    font-size: 12px;
+    margin-right: 0.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
